@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>自走棋助手 · 全能扩展</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<h1>自走棋助手 · 全能扩展</h1>
+<p class="sub">油猴脚本 + GoRes 同款重定向，一份顶两份。</p>
+
+<div id="state" class="state">正在读取…</div>
+
+<div class="row">
+  <label for="port">助手端口</label>
+  <input id="port" type="number" min="1" max="65535" step="1" inputmode="numeric">
+  <button id="savePort" class="mini">保存</button>
+</div>
+<p id="rulesUrl" class="hint"></p>
+
+<dl class="facts">
+  <dt>生效规则</dt><dd id="count">—</dd>
+  <dt>手动规则</dt><dd id="manual">—</dd>
+  <dt>赛季 / 版本戳</dt><dd id="rev">—</dd>
+  <dt>上次同步</dt><dd id="at">—</dd>
+  <dt>跳过</dt><dd id="skipped">—</dd>
+  <dt>注入脚本</dt><dd id="inject">—</dd>
+</dl>
+
+<div id="err" class="err" hidden></div>
+
+<div class="btns">
+  <button id="sync">立即同步</button>
+  <button id="toggle">暂停</button>
+  <button id="toggleScripts" class="mini">停脚本</button>
+  <button id="reloadGame" class="mini" title="停用脚本/主脚本后点此：刷新当前游戏页，让「停止」立即生效（会重开对局）。不自动刷新。">刷新游戏页</button>
+</div>
+<p class="foot" id="scriptsHint" style="margin:6px 0 0"></p>
+<div class="btns">
+  <button id="openOptions" class="primary">管理页（规则/官方立绘）</button>
+</div>
+<div class="btns">
+  <button id="openRes" class="mini">资源服务页</button>
+  <button id="openInstall" class="mini">助手安装页</button>
+</div>
+
+<p class="foot">页面注入(脚本本体) + 网络层重定向都在这一个扩展里。
+本机地址（127.0.0.1 / localhost）的请求不会被二次改写。</p>
+
+<script src="popup.js"></script>
+</body>
+</html>

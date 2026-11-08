@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN" data-page-node-id="DAVng4gLbEF2gDoi14OqvN">
+<head data-page-node-id="5VyBB4OixDT87z4epdkVYS">
+<meta charset="utf-8" data-page-node-id="MW084gyCH0YoD9e0euEQEo">
+<title>三国杀自走棋助手 · 全能扩展</title>
+<link rel="stylesheet" href="options.css" data-page-node-id="VS0PyCGYFAnxqWS1IL43ao">
+</head>
+<body data-page-node-id="f35RmBxvVChIgA7QM5ibwj">
+<header class="top" data-page-node-id="JOSyDMQb7hroD50TrGBT3F">
+  <h1 data-page-node-id="x1nUqKc17fThCmmeC8e7ad">三国杀自走棋助手 · 全能扩展<span id="ver" class="ver" data-page-node-id="yx1SSR2dI9dc2QJVOOrGFj"></span></h1>
+  <nav class="tabs" id="tabs" data-page-node-id="m2DrGZoLoOFFh86oBMGaA6">
+    <button data-tab="overview" class="tab on" data-page-node-id="GkfZ50sfyfEBVIKREFePhx">总览</button>
+    <button data-tab="scripts" class="tab" data-page-node-id="qXnwdhPXsPnmFBqAFBMhQX">脚本</button>
+    <button data-tab="rules" class="tab" data-page-node-id="o8XACqDImLvASOqtqYUMiG">规则</button>
+    <button data-tab="skins" class="tab" data-page-node-id="B7jCXdIH0fjG0kXRdpyIZl">官方立绘</button>
+    <button data-tab="market" class="tab" data-page-node-id="eF0eHenJK8X55BdG2kw3H2">获取新脚本</button>
+    <button data-tab="settings" class="tab" data-page-node-id="4h8j18aFS5DreEEqAEzIvK">设置</button>
+    <button data-tab="utils" class="tab" data-page-node-id="bDOBSZViyqGQwOihPyktMZ">实用工具</button>
+    <button data-tab="help" class="tab" data-page-node-id="IdjdoHXHlJUWLnxfLugwfK">帮助</button>
+  </nav>
+</header>
+
+<main data-page-node-id="QqqcDYRaNMEz0NKVIYCeOy">
+  <!-- ============================== 总览 ============================== -->
+  <section id="tab-overview" class="pane on" data-page-node-id="81CJyZI3pyvyGGNFwN2bFm">
+    <div id="state" class="state" data-page-node-id="rmUsvihDufhJEATavJd9WR">正在读取…</div>
+
+    <dl class="facts" data-page-node-id="fKEM3TAHfFHS2yDROgax0K">
+      <dt data-page-node-id="wEQPAzFWOOQFVgswTyUbv1">生效规则(实查)</dt><dd id="ovCount" data-page-node-id="RaGqG97GN3WSgkfhtcMCK5">—</dd>
+      <dt data-page-node-id="VRmC1sELUMFSG8Iv9tM92D">其中手动规则</dt><dd id="ovManual" data-page-node-id="G6VmDvSvrhAofM9XIBnxnd">—</dd>
+      <dt data-page-node-id="pqg2nDj8YHQRT0WvJe7LGd">赛季 / 版本戳</dt><dd id="ovRev" data-page-node-id="ulkS0nAaP0uZb29Ma3nUQc">—</dd>
+      <dt data-page-node-id="JP3xBafgCeWhXVTAFvh7re">上次同步</dt><dd id="ovAt" data-page-node-id="zTjHXIEChzvWlUj8lZEHYL">—</dd>
+      <dt data-page-node-id="8RQAgZdrTCNEE0zlRxWrZy">被跳过的</dt><dd id="ovSkipped" data-page-node-id="7mDiNbqxEcSTRZJiHofv6E">—</dd>
+    </dl>
+
+    <div class="row" data-page-node-id="msPxhMzqB0CAtxlGT5idlO">
+      <label for="port" data-page-node-id="FmSm0VKuvKjA7UkaxdGiQu">助手端口</label>
+      <input id="port" type="number" min="1" max="65535" step="1" inputmode="numeric" data-page-node-id="KY9EkyHXOp53uZLVvI7bsu">
+      <button id="savePort" class="mini" data-page-node-id="l3PUA0weARTRo5sHtBPoju">保存</button>
+    </div>
+    <p id="rulesUrl" class="hint" data-page-node-id="oGthTQUaXy8t8IswamNqba"></p>
+
+    <div class="btns" data-page-node-id="WeTKAm46Xlddn4COciDalX">
+      <button id="sync" data-page-node-id="g7Zm7tuJ34poHEG6P7HfLx">立即同步</button>
+      <button id="toggle" data-page-node-id="u5tLzUlcOlQcqU9cYdKlyz">暂停</button>
+      <button id="checkPage" class="mini" data-page-node-id="mmvit0AS9WvWD58VQJiUtP">检查游戏页</button>
+      <button id="diagnoseBtn" class="mini" data-page-node-id="N1diagBtn" title="一次查清“脚本/规则为什么没生效”">一键诊断</button>
+    </div>
+    <div class="btns" data-page-node-id="E9k91DxnA9UL6dj00xMz74">
+      <button id="openRes" class="mini" data-page-node-id="28wcEyO3xQ9cCGcwbwF3s0">资源服务页</button>
+      <button id="openInstall" class="mini" data-page-node-id="dIUZFwK2CD50UR4T2AM6bf">助手安装页</button>
+      <button id="gotoRules" class="mini" data-page-node-id="bSo883V0vFXzo5bCXUsc3l">去加一条规则</button>
+    </div>
+
+    <div id="err" class="err" hidden data-page-node-id="87G4TUHIKTYdNk3ZDmDfvn"></div>
+    <div id="pageProbe" class="probe" hidden data-page-node-id="Hk4zsdEmTgZz6AhXt4JBP6"></div>
+
+    <p class="hint" style="margin-top:16px" data-page-node-id="hltrnxRUEAYAow96dqqfKy">
+      「生效规则」是向浏览器<b data-page-node-id="Kh9YnKsYKjiDCoeLF8PrTd">实查</b>的条数，不是"我以为提交了几条" —— 提交失败时这两个数会分叉，正好暴露问题。
+    </p>
+  </section>
+
+  <!-- ============================== 规则 ============================== -->
+  <section id="tab-rules" class="pane" data-page-node-id="ldzjRaZKuoLLLTpZSj53wn">
+    <h2 data-page-node-id="szcvKN1Wc6lrOmEdcXvrRJ">重定向规则</h2>
+    <p class="hint" style="margin:0 0 12px" data-page-node-id="zNlFi8LTTSnChDcD4C3Etb">
+      一条规则 = 「URL 里的一截」→「换成的地址」，<b data-page-node-id="jUUNEJNesnH3mqqA8HtiAb">字面量包含匹配</b>（不写正则）。
+      手写规则<b data-page-node-id="gIq9mhhrPEBpGXWdIXwWba">优先于</b>助手下发的规则；助手没开时手写的照样生效。
+    </p>
+
+    <div class="bar" data-page-node-id="9q4HnoPS25As3rLFsBNKp2">
+      <input id="q" type="text" placeholder="搜匹配串 / 目标 / 备注…" data-page-node-id="HZeGF1jQQSXp1uw9gE9lvo">
+      <select id="fSource" data-page-node-id="bKqym1UOgjmLT2oSYAUg5c">
+        <option value="" data-page-node-id="qiOK1V7lYm3x8BNpkzVTnh">全部来源</option>
+        <option value="manual" data-page-node-id="mljKgxq0zkJUpBgETeZOBK">手动</option>
+        <option value="server" data-page-node-id="YHl4NBUJwgUaRHbJNUHW83">助手</option>
+      </select>
+      <select id="fKind" data-page-node-id="GIl3CEel29m3KX4P6bZSM0"><option value="" data-page-node-id="iSU3BjLGKuR970K9huczDa">全部类别</option></select>
+      <button id="refreshRules" class="mini" data-page-node-id="DzHGFqLhCjrPpLVNPjLyHi">刷新</button>
+      <button id="addRule" class="mini primary" data-page-node-id="0CEai3yw8hNn4qEOazv0t1">＋ 添加规则</button>
+      <button id="exportRules" class="mini" data-page-node-id="gQ0OQGBwOJ8D7ubXDZmoHG">导出手动</button>
+      <button id="importRules" class="mini" data-page-node-id="MsyPQNapJLbaGEPMPsVFVg">导入</button>
+      <input type="file" id="importFile" accept=".json,application/json" data-page-node-id="gL0yxOaPXOvSX9mr8crlH0">
+    </div>
+    <p id="ruleSummary" class="hint" data-page-node-id="65dCkz1x4GMawDuf07GIia"></p>
+
+    <div id="editor" class="editor" hidden data-page-node-id="VM78hrdW8RKhV2RKZ6YhCC">
+      <div class="row" data-page-node-id="ZhCsGNSWykk9npKoHHmPsq">
+        <label data-page-node-id="2MtaibWiUb71x6FTXdu5Px">匹配串</label>
+        <input id="ePattern" type="text" placeholder="URL 里的一截，如 tavernChess/piece/luxun" data-page-node-id="U96RdX3Utw0yTI3SNtGkDU">
+      </div>
+      <div class="row" data-page-node-id="B4testRow">
+        <label data-page-node-id="B4testLbl">命中测试</label>
+        <input id="eTestUrl" type="text" placeholder="粘一个游戏里的资源 URL，测上面这条匹配串会不会命中" data-page-node-id="B4testUrl">
+        <button id="eTestBtn" class="mini" data-page-node-id="B4testBtn">测一下</button>
+        <span id="eTestOut" class="hint" data-page-node-id="B4testOut"></span>
+      </div>
+      <div class="row" data-page-node-id="N3regexRow">
+        <label data-page-node-id="N3regexLbl">正则匹配</label>
+        <input type="checkbox" id="eRegex" data-page-node-id="N3regexBox">
+        <span class="hint" data-page-node-id="N3regexHint">勾选=按正则(高级，配上面的命中测试验证)；不勾=字面量包含(默认)</span>
+      </div>
+      <div class="row" data-page-node-id="0rtu2NkxijniH44BC2tDw6">
+        <label data-page-node-id="W4TZTA2faTDzJoTj0Cays8">换成</label>
+        <span class="seg" id="eModes" data-page-node-id="iXX9NO2ijIlTXByd7HyxqV">
+          <button data-mode="local" class="segbtn on" data-page-node-id="mnjyof45wtmy0hnHqwJ40M">本机图片</button>
+          <button data-mode="url" class="segbtn" data-page-node-id="nPXKUECsVaPgohOaL1Btdj">网络地址</button>
+        </span>
+      </div>
+      <div class="row" data-page-node-id="EFwnRMb4XnWuNTBHiwSJRi">
+        <label data-page-node-id="bO2lDTSdBMCw9HDRAzfMHs"></label>
+        <input id="eValue" type="text" placeholder="文件名，如 luxun.png（放在助手的 我的图/ 目录）" data-page-node-id="KhSlAg7swCjKsTi4UIDpnW">
+      </div>
+      <div class="row" data-page-node-id="vhHI6yvJNmQTvb5SGq3hMC">
+        <label data-page-node-id="4hAKyhREdwcR7foER9IjzW">类别</label>
+        <select id="eKind" data-page-node-id="4CCdcLPE4N9glNkvGcjp0D"></select>
+      </div>
+      <div class="row" data-page-node-id="E4pADq5FW9OrtaWvH2b3v3">
+        <label data-page-node-id="rI5lLvdrju1AMH9RtSEyyB">备注</label>
+        <input id="eNote" type="text" placeholder="可选，显示在列表里" data-page-node-id="q4uGmLOcl76JFfgEP828fC">
+      </div>
+      <p id="eHint" class="hint" data-page-node-id="mRugYhrS0ehBzwjPTVbS71"></p>
+      <div class="btns" data-page-node-id="6KQfp8KhFdSMR9ZL9DbZEt">
+        <button id="eSave" class="primary" data-page-node-id="xG2jVukmYx3m4QdMrFHbT9">保存并生效</button>
+        <button id="eCancel" class="mini" data-page-node-id="yDnk5cQwKCbyNktW0N9NYr">取消</button>
+      </div>
+    </div>
+
+    <div class="list" data-page-node-id="jEQ9ahNrHASWPD839yDooO">
+      <div class="lhead" data-page-node-id="8gwMEE21kxKA9H9WZccpWA">
+        <span data-page-node-id="dWX33HwVLyIsVfySQokIzT">匹配串</span><span data-page-node-id="uXmsAKX3z7lHh4oBRhCHxO">换成</span><span data-page-node-id="tg3x5QHSHjPZKflzcRB2F4">类别</span><span data-page-node-id="VcZxGQV5TPFtIs5tV4YWCn">来源</span><span data-page-node-id="CNSnLvaMTkYDkuHf7ICKja"></span>
+      </div>
+      <div id="lrows" data-page-node-id="8X9Jxc8H9zaqS93fbDGPF5"></div>
+    </div>
+    <p class="hint" style="margin-top:8px" data-page-node-id="D9h5cqC4P5LnZcoS8fD4Au">
+      「本机图片」会走助手的 <code data-page-node-id="1ViMBL2M1E6NqzkKni6ose">/img/</code> —— 这是唯一的本地图写法，<code data-page-node-id="ZGGJTTf5LE2xl0nODEXwX6">file://</code> 路径浏览器不让 https 页面加载。
+    </p>
+  </section>
+
+  <!-- ============================== 官方立绘 ============================== -->
+  <section id="tab-skins" class="pane" data-page-node-id="AyhJNvF9XpBv2gSU1kIaWV">
+    <h2 data-page-node-id="keKA1wPTglbpk82lfM7Ogz">官方武将立绘</h2>
+    <p class="hint" style="margin:0 0 12px" data-page-node-id="R1YtKVNI7QK1IXhsp0HjuX">
+      清单来自助手（配置表里确实存在的皮肤，不会挑到 404 的名字）。
+      同一位武将有两套时（赛季改版换的），每条都标了<b data-page-node-id="spFqOs7ZrpXbUJeOOT62n7">是不是本赛季在用的那套</b>。
+    </p>
+    <div class="bar" data-page-node-id="eF7DgBepBChBNqypNzTtpq">
+      <input id="sQ" type="text" placeholder="按武将名 / 资源名搜，如 陆逊 / luxun" data-page-node-id="v9ey4cTFhJY2osfTsDsIE3">
+      <select id="sKind" data-page-node-id="WHAoDPltkp1f5wuzDvHxlX"><option value="" data-page-node-id="PoqXSDzGyioXWF3gVzFAZV">全部类别</option></select>
+      <button id="refreshSkins" class="mini" data-page-node-id="TWAgRMuWGTGp0HCrHdwU7B">刷新</button>
+      <span id="sCount" class="hint" data-page-node-id="BVeEgABHKl1EfzJIcTO95i"></span>
+    </div>
+    <div id="sGrid" class="grid" data-page-node-id="ICUNMWaSeiklHgDFXvB9X4"></div>
+    <p class="hint" style="margin-top:10px" data-page-node-id="8Ilz9vw0UDNVIuHCguaLX7">
+      点「用这条」→ 自动带好目标地址回到「规则」页，你只需确认匹配串再保存。
+      要整页留空自己写，就去「规则」页点「＋ 添加规则」。
+    </p>
+  </section>
+
+  <!-- ============================== 脚本管理 ============================== -->
+  <section id="tab-scripts" class="pane" data-page-node-id="C6DGLKJjjnCF6NoD2LG0QL">
+    <h2 data-page-node-id="H3fm1VCEM2USeUUuItBMkr">脚本管理</h2>
+    <p id="usHint" class="hint" style="margin:0 0 12px" data-page-node-id="uuYTQnYUmSXDymTDyNONwy">正在读取…</p>
+
+    <div class="bar" data-page-node-id="H5Udvlk1dydyLSavFgO35a">
+      <button id="addScriptBtn" class="mini primary" data-page-node-id="eELWjzuTKw2ysBnauccJ0X">＋ 添加脚本</button>
+      <button id="importScriptsBtn" class="mini" data-page-node-id="AHNNfZAH1vFoCJcUVkXVBp">导入 .user.js / 备份包</button>
+      <input type="file" id="scriptFile" accept=".user.js,.js,.json" multiple data-page-node-id="4zDQsgP1fMfsfldKfQMmmy">
+      <button id="refreshScripts" class="mini" data-page-node-id="AmN4tkzt9CAyadDZYPWrXw">刷新</button>
+    </div>
+
+    <div id="scriptEditor" class="editor" hidden data-page-node-id="Rsv7HTGGNM4OVH7Za55Mlo">
+      <div class="row" data-page-node-id="pEmS71LLGcs8jYdYQ8jmoU">
+        <label data-page-node-id="9GzUOqtYRk2fKTy2bDcGw2">名称</label>
+        <input id="seName" type="text" placeholder="留空 = 从头注释的 @name 取" data-page-node-id="9t8naU3Bos0Ipd2mnYCMMy">
+      </div>
+      <div class="row" data-page-node-id="MEzQcI8XhITYNgVzf6ma6r">
+        <label data-page-node-id="JLHVxJGwHUfz83lbkyMXMz">注入到</label>
+        <textarea id="seMatches" rows="2" class="code" spellcheck="false"
+                  placeholder="每行一条，如 *://web.sanguosha.com/*"></textarea>
+      </div>
+      <div class="row" data-page-node-id="KchNg6zMCPccRxRDQ8sEWx">
+        <label data-page-node-id="Bi7FPigYng5ePug8DmDtQ6">代码</label>
+        <textarea id="seCode" rows="14" class="code" spellcheck="false"
+                  placeholder="粘贴脚本代码（带 ==UserScript== 头的话，名字/匹配会自动取）"></textarea>
+      </div>
+      <p id="seHint" class="hint" data-page-node-id="YEyJpnVt1e5JEoYWQMo8Z3"></p>
+      <div class="btns" data-page-node-id="F23C5JYMwvlrGnMb67BfdZ">
+        <button id="seSave" class="primary" data-page-node-id="rIHNLIbHwR5G5JVXvdczmf">保存并注入</button>
+        <button id="seCancel" class="mini" data-page-node-id="5JotpNGGV66uCJhCGJPV0f">取消</button>
+      </div>
+    </div>
+
+    <div id="scriptRows" data-page-node-id="3pCrpaYc076tkYfM1QWH54"></div>
+    <p class="hint" style="margin-top:10px" data-page-node-id="7vz4P2Ib6dzw8felCpEPqt">
+      主脚本由助手下发并注入游戏页（不随扩展内置），所以不能在页内单独停用 ——
+      要停请在扩展管理页（Chrome: <code>chrome://extensions</code> / Edge: <code>edge://extensions</code>）暂停整个扩展。自己添加的脚本可以随便启停/编辑/删除。
+    </p>
+  </section>
+
+  <!-- ============================== 获取新脚本 ============================== -->
+  <section id="tab-market" class="pane" data-page-node-id="zGsJJUhy9KOI3tCAb8OJFe">
+    <h2 data-page-node-id="J773MJs5jLS8NIvrsLCnBg">获取新脚本</h2>
+    <p class="hint" style="margin:0 0 12px" data-page-node-id="5JxSW2Z1gaYfBZOpFLFKzU">
+      清单来自助手（<code data-page-node-id="QH3jAK0vaDUbT9c4eMfIR0">/scripts.json</code>）—— 助手自带的脚本在这里一键安装；
+      外面的 <code data-page-node-id="KFkkhMA7LExLWHTn6qQBdJ">.user.js</code> 文件直接拖进「脚本」页的添加框就行。
+    </p>
+    <div class="bar" data-page-node-id="IAKAV69bcwpIHpsEWUt6HM">
+      <button id="refreshMarket" class="mini" data-page-node-id="S8n1OBrHoehxDOwBB1bjmv">刷新</button>
+      <button id="openMarketRes" class="mini" data-page-node-id="0g4ZUzcuFDoOgZlexDa7dy">打开资源服务页</button>
+      <span id="mCount" class="hint" data-page-node-id="jrvJ7pJRnQtTzmCyN3ce9e"></span>
+    </div>
+    <div id="mList" data-page-node-id="LqF8cL4fqpXVxqVmVYAyX1"></div>
+  </section>
+
+  <!-- ============================== 设置 ============================== -->
+  <section id="tab-settings" class="pane" data-page-node-id="PAdRTnOobHSX3Hzfir4m4T">
+    <h2 data-page-node-id="ZlIUcPI9sNHRupcR8UEeKV">设置</h2>
+    <div class="setrow" data-page-node-id="e2SyDm032ugXZwbqTJXuPW">
+      <label data-page-node-id="jq0A2utb5HjNOQQzySfJkD"><input type="checkbox" id="setAutoSync" data-page-node-id="YvlTml5A5kkNCxnlVLPADx"> 自动同步规则</label>
+      <p class="hint" style="margin:4px 0 0" data-page-node-id="G4UpdgftvHYdZTCcydwxWs">开着时页面每 20 秒 / 后台每分钟从助手拉一次规则。关掉后只剩「总览」里的「立即同步」和打开游戏页时的一次性同步。</p>
+    </div>
+    <div class="setrow" data-page-node-id="Za9LdtfL7VXrFsVHH2yo8a">
+      <label data-page-node-id="5kSSHjOiJ53zry7KduB8v6"><input type="checkbox" id="setBadge" data-page-node-id="YjXYZADbcF9H4K28SSEfEI"> 图标角标显示规则条数</label>
+      <p class="hint" style="margin:4px 0 0" data-page-node-id="uLLu1PGqmYGGWwuuNiNJj0">关掉后角标清空（暂停状态仍会显示 off）。</p>
+    </div>
+    <div class="setrow" data-page-node-id="Sq7scriptsOnOffRow">
+      <label data-page-node-id="Sq7scriptsOnOffLbl"><input type="checkbox" id="setScriptsEnabled" data-page-node-id="Sq7scriptsOnOffBox"> 注入脚本到游戏页（总开关）</label>
+      <p class="hint" style="margin:4px 0 0" data-page-node-id="Sq7scriptsOnOffHint">
+        <b>关掉 = 一个脚本都不注入</b>（含主脚本／桥接），已注册的全部撤销。<br>
+        ⚠ 两件事要说清楚：<br>
+        ① 这跟「总览」页那个<b>「暂停/启用」不是一回事</b> —— 那个只撤网络重定向规则，脚本照跑；这个才是真停脚本。<br>
+        ② userScripts 的撤销只对<b>之后新开的页面</b>生效；<b>已经打开的游戏页里脚本还在跑，要刷新一次页面</b>才彻底停。<br>
+        ③ 主脚本（桥接）停掉后，助手就读不到游戏数据了 —— 想让助手干活就得开着。
+      </p>
+    </div>
+    <div class="setrow" data-page-node-id="5RE9BMuEgCCHXIrio6AL1H">
+      <label data-page-node-id="HEiDOt5SzwgIZ7b12a4lBG">助手端口</label>
+      <p class="hint" style="margin:4px 0 0" data-page-node-id="cXOF3LDBJttXTnsI85p4FG">在「总览」页改 —— 那里能看到改完后的规则地址，方便确认。</p>
+    </div>
+    <p class="hint" style="margin-top:16px" data-page-node-id="jYWDs5fRrVVjke4kNt0E2Z">
+      这些设置只影响本扩展；助手里那套（剧本、决策、资源规则）照旧在助手自己的界面上配。
+    </p>
+  </section>
+
+  <!-- ============================== 实用工具 ============================== -->
+  <section id="tab-utils" class="pane" data-page-node-id="8sYQfWEtjRwocejtL6ZZC3">
+    <h2 data-page-node-id="QCqyBkR4Y8ip26mEsgpwnJ">实用工具</h2>
+    <div class="btns" style="flex-wrap:wrap" data-page-node-id="COv7DX0k1nKKScXIVRvJep">
+      <button id="utilTest" class="mini" data-page-node-id="nE3zm1r9utg0zReerxojMJ">测试助手连接</button>
+      <button id="utilRereg" class="mini" data-page-node-id="hxn5Gq7nAj1K4zs6zfyjiU">重新注入全部脚本</button>
+      <button id="utilExport" class="mini" data-page-node-id="qmHujVJXh5A78WLk9QAiTG">导出全部数据</button>
+      <button id="utilImport" class="mini" data-page-node-id="rDieNMmKuijLGeRST1q4vC">导入全部数据</button>
+      <input type="file" id="utilFile" accept=".json,application/json" data-page-node-id="QF75qiyosYgdQH0vEZXBYU">
+      <button id="utilBackup" class="mini" data-page-node-id="N2backupBtn" title="把 设置+手动规则+自添脚本 打包备份到助手本地(轮转保留20份)">备份到助手</button>
+      <button id="utilWipe" class="mini danger" data-page-node-id="8IPPK3RPXsxHLBGGItBCpn">清空手动规则</button>
+    </div>
+    <div id="utilOut" class="probe" hidden data-page-node-id="Mk7DPi5e8pQwCWyhJZAPEw"></div>
+    <div class="bar" style="margin-top:12px" data-page-node-id="N2bkBar">
+      <button id="utilListBk" class="mini" data-page-node-id="N2listBk">查看助手备份</button>
+      <span class="hint" data-page-node-id="N2bkHint">备份在助手的 data/ext_backups/，轮转留 20 份；可从这里直接恢复</span>
+    </div>
+    <div id="backupList" class="list" data-page-node-id="N2bkList"></div>
+    <p class="hint" style="margin-top:14px" data-page-node-id="ZDpvDuBmPtnIYPfF7MHXyk">
+      「导出全部数据」= 手写规则 + 自己添加的脚本 + 设置，存成一个 JSON ——
+      换浏览器/重装扩展时在导入一次全回来。内置主脚本不导出（它随扩展文件走）。
+    </p>
+  </section>
+
+  <!-- ============================== 帮助 ============================== -->
+  <section id="tab-help" class="pane" data-page-node-id="C2n6TwbZWt4HR7t2aEi24Z">
+    <div class="help" data-page-node-id="uTgioZHvObgKK0GD91Duh4">
+      <h2 data-page-node-id="WKpjDetUHOAfusf2r6OXoX">这个扩展里装了什么</h2>
+      <div class="box" data-page-node-id="tZXsDdBAKdKBAa84a3BKAo">
+        <b data-page-node-id="CNoSo2CAJLTpRwMZ8lvz5e">一份顶两份</b> —— 装这一个就不用再装 Tampermonkey，也不用装 GoRes：
+        <table data-page-node-id="6jJ2O8Mtd9Kxh2IbLXNWjo">
+          <tr data-page-node-id="ba797pYeebM0dlw44rXMrJ"><th data-page-node-id="7GwqF6HN8fo4RUAmiCf0ak">能力</th><th data-page-node-id="MLY1lFFNRCMOuOI0mLhi42">在哪一层</th><th data-page-node-id="WGt4zHFw6trWma58BOtDG0">覆盖</th></tr>
+          <tr data-page-node-id="Dz5CfB3pH0s7vEZFynq0gJ"><td data-page-node-id="SQzxWemusp17szdohJmXNp">油猴脚本本体</td><td data-page-node-id="Y0oI77hxFVidpe6ElplQMM">页面层（<code data-page-node-id="OoedpHjNdmTkl1z6eneUdi">world:"MAIN"</code> 注入，同一份代码）</td><td data-page-node-id="j3jyXE99E04OmfgG0GGHSZ">收发协议 / 剧本 / 看牌 / 换肤的页面 hook</td></tr>
+          <tr data-page-node-id="5PVQYuuMZ864dPX5zQ4R1J"><td data-page-node-id="qwrQz0Otmyaa2il4dOxHTO">GoRes 同款重定向</td><td data-page-node-id="BkwfJLTZyXKttprUXxqzAG">网络层（declarativeNetRequest）</td><td data-page-node-id="QEvYArWRT8BF6UElPKBLzq"><b data-page-node-id="Y7kNOPKCc0YFapbLs7BT6h">所有</b>资源 —— 图集 <code data-page-node-id="xpZUHoaQ2A8aG5s3xmtLEI">.atlas</code>、语音 <code data-page-node-id="PMGSpEhyTtHKnHFHxbLW8d">.mp3</code> 都能换</td></tr>
+          <tr data-page-node-id="iCAwSS78dGHDX2FYD7Kv6r"><td data-page-node-id="X1zKOp7eAxonFYLJwVhGmE">管理页（本页）</td><td data-page-node-id="8DBAsWHY9ZvhHFH6AgL55E">—</td><td data-page-node-id="mSPUCLHwL2gl6HZz24KUEZ">脚本管理 / 添加脚本 / 规则 / 挑官方立绘 / 设置 / 工具</td></tr>
+        </table>
+        页面层那套换肤 hook 会自己让位给网络层（读 <code data-page-node-id="R922CPFNuoejkMmpHW15hK">&lt;html data-sgs-res-ext&gt;</code> 标记），
+        两层不会重复改写同一个请求。
+      </div>
+
+      <h3 data-page-node-id="HiAaG2hipgCGtPD1SsLsFY">规则从哪来</h3>
+      <ul data-page-node-id="YwTGGHZlcEmmZiF6Oc1FxJ">
+        <li data-page-node-id="IzIEojjIeybqxKrN2Q7q1U"><b data-page-node-id="0WA0ZGj5EDBknM6ykxP7VA">助手下发</b>：助手开着时自动从 <code data-page-node-id="NAGnJQqPgKSJO6HzdRxUna">/rules</code> 同步（页面开着约 20 秒一次，页面没开最多 1 分钟一次）。</li>
+        <li data-page-node-id="GVJoeZzGRomH3KxkKNJXB6"><b data-page-node-id="QKpOsd7Zw8qOg1kMcNpVgD">手写</b>：「规则」页自己加。存在浏览器本地，助手没开也生效，可导入导出。</li>
+        <li data-page-node-id="Fe7f4RmhtErgtToB115JCh">同一个匹配串两边都写了 → <b data-page-node-id="n33vpYFuDLbxbwVxeY0aRD">手写的赢</b>。</li>
+      </ul>
+
+      <h3 data-page-node-id="EwYYcRFILPsaIF50DY1Rbb">脚本管理怎么用</h3>
+      <ul data-page-node-id="VynZbd5c5nifSTFUSYp7MK">
+        <li data-page-node-id="mZt99aHGYcKDP1VtHxl5vY"><b data-page-node-id="cN4CEON7jCXyQz9EeYtW1x">添加脚本</b>：「脚本」页 → 「＋ 添加脚本」粘贴代码，或把 <code data-page-node-id="sLbch1ByX9Ur5ExJyP06zc">.user.js</code> 文件直接选进来。
+          带 <code data-page-node-id="gb8NOwZ6kPB6VG7s8KCjsc">==UserScript==</code> 头的自动取名字和 <code data-page-node-id="T4SuqkI87bfOkVzrgxzGDk">@match</code>；没头的用默认游戏域。</li>
+        <li data-page-node-id="bW2n6OcEQpNbcH5OdRijYn"><b data-page-node-id="u7FBLpOGnKBSOQRjrmA7SG">启停</b>：每条脚本一个开关，停了立即从页面撤下（走 <code data-page-node-id="b68LubrxcjWa1G4TdDhUX5">chrome.userScripts</code>，
+          和 Tampermonkey 同一个 API）。内置主脚本除外 —— 它走 manifest 注入，最可靠，要停请停整个扩展。</li>
+        <li data-page-node-id="wsH4Q2hTnCoIF9KdWRoppH"><b data-page-node-id="Fu0PFIRZpbwmlc5dB3UX8g">获取新脚本</b>：「获取新脚本」页列的是助手自带的（<code data-page-node-id="a5HAuJvXWiGf1duZDBcMzS">/scripts.json</code>），
+          一键安装；主脚本标了「已内置」不用再装。别处的脚本文件拖进「脚本」页即可。</li>
+        <li data-page-node-id="CO0lspHJJNIxeroFfMDdfF"><b data-page-node-id="RVrpGHmjg1fgoI0wiHNAyc">导入/备份</b>：「实用工具」页可以导出全部数据（规则+脚本+设置），换机/重装一次导回。</li>
+      </ul>
+
+      <h3 data-page-node-id="mKsVfQ9EDm7aRdFcL0oSDM">常见问题</h3>
+      <ul data-page-node-id="k05k1MTngrO66FWIYXmRSB">
+        <li data-page-node-id="G18eF8oU3Qq5aeGZWvSAUF"><b data-page-node-id="bXFjIYHN4KDVCwaauMNiNi">为什么有的规则没生效？</b> 总览「被跳过的」一栏会写原因：目标不是 http 地址 / 同一截 URL 配了两条 / 超出条数上限(900)。</li>
+        <li data-page-node-id="LOtHgPWHVlbU7auAoJOpMp"><b data-page-node-id="STFHV1xhWGcd1awvCNKEs2">本地图怎么换？</b> 只能用「本机图片」模式（走助手 <code data-page-node-id="eCAcmxHVgGhcnYqQ5U44Ql">/img/</code>），并把图放进助手的 <code data-page-node-id="p81dKbJTIlXQc1IZKZEjae">我的图/</code> 目录。</li>
+        <li data-page-node-id="FUsVOZpFxBtp6R3QJ6WeS6"><b data-page-node-id="Gb6enUDqE9YFaLVlzPE2zO">换季要重装吗？</b> 不用。规则自动跟助手走。</li>
+        <li data-page-node-id="Cpdw9cMFrm2zXX3VLx8DUt"><b data-page-node-id="dJpc6qyWyOHul28MjKg5Ra">和轻量版(res_ext)什么关系？</b> 轻量版只有网络层重定向，要配 Tampermonkey 才完整；本扩展一份全包。两个都装也不打架，但没必要。</li>
+      </ul>
+
+      <h3 data-page-node-id="ukwqQ9S7Ozt2KAcoemWoYx">边界</h3>
+      <ul data-page-node-id="YpT4EIV7eLvkJkvynHkFVp">
+        <li data-page-node-id="Ynk30UJU8cHKU0fQ6CZQHz">只对<b data-page-node-id="CZAdqZ0SsZruOWBuWS2xjo">资源 URL</b> 做重定向，顶层文档导航永远不碰（不会"点进游戏变白屏"）。</li>
+        <li data-page-node-id="8r8VFwkYJiGkO26vIvXt5M">本机地址（<code data-page-node-id="5xGatFdQz3UApDsoqfhdLU">127.0.0.1</code> / <code data-page-node-id="8ZpXaSKE6CTmrersXnxB8V">localhost</code>）的请求不会被二次改写（防套娃）。</li>
+        <li data-page-node-id="xOetCSZiOTsL31ohDMUOam">规则来源只允许<b data-page-node-id="cWF1IHEF37fcStljvSaGYj">本机</b> —— 端口可改，host 不允许被填成外部地址。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<div id="toast" class="toast" hidden data-page-node-id="3MDwCsotjC8NCltmRZ0AjL"></div>
+<script src="lib/scriptreg.js"></script>
+<script src="lib/codestore.js"></script>
+<script src="lib/manual.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+keyboard>=0.13
+pyinstaller
+pywin32
+pillow
+mss
+pytesseract
+numpy
+pyautogui
+requests
+# 赛季数据工具解密官方 Config.sgs / TavernChessConfig.sgs 用的 wasm 运行时
+# (缺了会在『赛季数据』页报错: 需要 wasmtime 才能解密)
+wasmtime

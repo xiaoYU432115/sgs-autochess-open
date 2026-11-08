@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "三国杀自走棋助手 · 模块容器",
+  "version": "4.139",
+  "description": "把助手脚本拆成模块跑: 一个模块崩了不影响别的, 角标上直接标红是哪块; 还能挂你自己加的脚本。",
+
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.sanguosha.com/*",
+    "*://*.sanguosha.cn/*",
+    "*://*.4399.com/*",
+    "http://127.0.0.1:*/*",
+    "http://localhost:*/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.sanguosha.com/*",
+        "*://*.sanguosha.cn/*",
+        "*://*.4399.com/*"
+      ],
+      "js": ["src/provider.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://*.sanguosha.com/*",
+        "*://*.sanguosha.cn/*",
+        "*://*.4399.com/*"
+      ],
+      "js": ["src/loader.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["modules/*.js", "src/*.js"],
+      "matches": ["*://*.sanguosha.com/*", "*://*.sanguosha.cn/*", "*://*.4399.com/*"]
+    }
+  ]
+}

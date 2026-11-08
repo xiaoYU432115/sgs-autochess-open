@@ -1,0 +1,35 @@
+# Local configuration and runtime data
+config.json
+config*.json
+data/
+instances/
+*.jsonl
+*.log
+*.log.*
+
+# Generated or user-supplied game files
+*.sgs
+*.wasm
+*.atlas
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.mkv
+
+# Build and Python artifacts
+build/
+dist/
+extension/dist/
+__pycache__/
+*.py[cod]
+*.spec
+*.exe
+
+# Local development state
+.venv/
+node_modules/
+.env
+.env.*
+*.bak

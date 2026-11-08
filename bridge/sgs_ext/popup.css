@@ -1,0 +1,93 @@
+/* 全能扩展 · 弹窗样式（深色 + 琥珀，与游戏页/资源服务页/管理页同一套） */
+:root {
+  --bg: #2a2a2a;
+  --panel: #333333;
+  --line: #474747;
+  --text: #eeeeee;
+  --dim: #9a9a9a;
+  --accent: #e0b060;
+  --link: #7fd4ff;
+  --ok: #7fc99a;
+  --bad: #ef8b8b;
+  --warn: #e0b060;
+}
+* { box-sizing: border-box; }
+body {
+  width: 330px;
+  margin: 0;
+  padding: 14px 16px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.6 "Microsoft YaHei UI", "Segoe UI", sans-serif;
+}
+h1 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.sub { margin: 0 0 10px; font-size: 12px; color: var(--dim); }
+
+.state {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--panel);
+  border-left: 3px solid var(--line);
+  font-size: 13px;
+}
+.state.on { border-left-color: var(--ok); }
+.state.off { border-left-color: #b4b2a9; }
+.state.bad { border-left-color: var(--bad); }
+.state.warn { border-left-color: var(--warn); }
+
+.row { display: flex; align-items: center; gap: 8px; margin: 12px 0 0; }
+.row label { flex: 0 0 64px; font-size: 12px; color: var(--dim); }
+input[type="number"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #242424;
+  color: var(--text);
+  font: inherit;
+}
+.hint { margin: 4px 0 0; font-size: 12px; color: var(--dim); word-break: break-all; }
+
+.facts {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2px 8px;
+  margin: 12px 0 0;
+  font-size: 12px;
+}
+.facts dt { color: var(--dim); }
+.facts dd { margin: 0; word-break: break-all; }
+
+.err {
+  margin: 10px 0 0;
+  padding: 7px 9px;
+  border-radius: 6px;
+  background: #3a2626;
+  color: var(--bad);
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.btns { display: flex; gap: 8px; margin-top: 10px; }
+button {
+  flex: 1 1 0;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #3c3c3c;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { background: #464646; }
+button:disabled { opacity: .55; cursor: default; }
+button.mini { flex: 0 0 auto; padding: 5px 10px; font-size: 12px; }
+button.primary { background: #3d5570; border-color: #4d6b8c; }
+
+.foot { margin: 12px 0 0; font-size: 11px; color: #8a8a8a; }
